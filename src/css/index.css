@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+*::selection {
+  background-color: #ffffffcb;
+  color: #0084ff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #0084ff, #00ccff);
+  border-radius: 5px 0px 0px 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.home-container {
+  position: relative;
+  background: radial-gradient(circle at top left, #1e1e2f, #0d0d1a);
+  color: white;
+  text-align: center;
+  padding: 120px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 25px 25px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  animation: moveGrid 10s linear infinite;
+  pointer-events: none;
+}
+
+/* @keyframes moveGrid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 40px;
+  }
+} */
+
+.home-title {
+  z-index: 1;
+  margin-top: 70px;
+  width: 35rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.error-title {
+  z-index: 1;
+  font-size: 8rem;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-subtitle {
+  z-index: 1;
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 750px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-title {
+  z-index: 1;
+  margin-top: 100px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.features-subtitle {
+  z-index: 1;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: #aaa;
+  position: relative;
+}
+
+.plans-title {
+  z-index: 1;
+  margin-top: 100px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.plans-subtitle {
+  z-index: 1;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: #aaa;
+  position: relative;
+}
+
+.recommended {
+  z-index: 1;
+  border: 2px solid #0084ff;
+  position: relative;
+}
+
+.recommendation-tag {
+  z-index: 1;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #0084ff;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.discord-button {
+  z-index: 1;
+  background: #0d0d1a;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px #0084ff3b;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.discord-button i {
+  color: #0084ff;
+  margin-right: 2px;
+}
+
+.discord-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 7px 10px #0084ffcb;
+}
+
+.features {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.feature-card {
+  z-index: 1;
+  background: #0d0d1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0px 4px 10px #0084ff3b;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0px 7px 10px #0084ffcb;
+  transform: scale(1.05);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0084ff;
+}
+
+.plans-header {
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.view-more {
+  z-index: 1;
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  right: 120px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.view-more:hover {
+  color: #0084ff;
+}
+
+
+.plans-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.plan-card {
+  z-index: 1;
+  background: #0d0d1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 10px #0084ff3b;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0px 7px 15px #0084ffcb;
+  transform: scale(1.05);
+}
+
+.plan-card h3 {
+  z-index: 1;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan-card p {
+  z-index: 1;
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  z-index: 1;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.plan-button {
+  z-index: 1;
+  background-color: #0d0d1a;
+  color: #ffffff;
+  border: #0084ff 1px solid;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.plan-button:hover {
+  background: #0084ff;
+}
+
+.notfound-image {
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+#feedback {
+  background: radial-gradient(circle at top left, #1b1b2f, #0d0d1a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 10px;
+  margin: 130px auto;
+  border-radius: 15px;
+  max-width: 1200px;
+  position: relative;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feedback-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-card {
+  background: #0d0d1a;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0px 4px 10px #0084ff3b;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.feedback-card:hover {
+  box-shadow: 0px 7px 15px rgba(0, 132, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.feedback-card.fade {
+  opacity: 0;
+}
+
+.feedback-title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #0084ff;
+  font-weight: bold;
+}
+
+.feedback-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.feedback-dots {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 20px;
+}
+
+.feedback-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #aaa;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback-dot.active {
+  background: #0084ff;
+}
+
+.stars {
+  color: #0084ff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.minecraft-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  padding: 50px;
+  background: radial-gradient(circle at top left, #1b1b2f, #0d0d1a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.minecraft-content {
+  max-width: 50%;
+}
+
+.minecraft-title {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.minecraft-text {
+  font-size: 1.0rem;
+  color: #aaa;
+  margin: 20px 0;
+}
+
+.minecraft-button {
+  display: inline-block;
+  background: #0084ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.minecraft-button:hover {
+  background: #005fcc;
+}
+
+.minecraft-image img {
+  max-width: 80%;
+  height: auto;
+  filter: drop-shadow(0 0 0.5rem #0084ff)
+}
+
+.faq-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 120px;
+  align-items: flex-start;
+}
+
+.faq-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 85px;
+  position: relative;
+}
+
+.faq-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.faq-title {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faq-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.accordion {
+  width: 100%;
+  position: relative;
+}
+
+.accordion-item {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #1b1b2f;
+}
+
+.accordion-header {
+  padding: 15px;
+  background-color: #0d0d1a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-question {
+  font-size: 1.1rem;
+  margin: 0;
+  background: linear-gradient(90deg, #0084ff, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+  color: #0084ff;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+  padding: 0 15px;
+}
+
+.accordion-content.open {
+  padding: 15px;
+  max-height: 200px;
+}
+
+.accordion-content p {
+  margin: 0;
+  color: #aaa;
+}
+
+@media (max-width: 992px) {
+  .faq-image {
+    display: none;
+  }
+
+  .faq-section {
+    flex-direction: column;
+    margin-top: 50px; 
+  }
+  
+  .faq-content {
+    order: 1;
+    flex: 1 1 100%;
+    padding: 10px;
+    position: relative;
+    z-index: auto;
+  }
+  
+  .faq-image-container {
+    order: 2;
+    flex: 1 1 100%;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: auto;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+  }
+  
+  .faq-text {
+    font-size: 1rem;
+  }
+  
+  .accordion-header {
+    padding: 10px;
+  }
+  
+  .accordion-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .minecraft-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .minecraft-title {
+    font-size: 2.0rem;
+  }
+
+  .minecraft-content {
+    max-width: 100%;
+  }
+  .minecraft-image img {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home-container {
+    padding: 100px 25px;
+  }
+  .home-title {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 100px 25px;
+  }
+  .home-title {
+    margin-top: 50px;
+    width: 25rem;
+  }
+  .view-more {
+    right: 0;
+    left: 0;
+  }
+  #feedback {
+    padding: 60px 15px;
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .home-container {
+    padding: 125px 25px;
+  }
+  .home-title {
+    margin-top: 20px;
+    width: 18rem;
+  }
+  .home-subtitle, .faq-text {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+  .features-title {
+    font-size: 1.8rem;
+  }
+  .features-subtitle {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+  }
+  .feedback-card {
+    width: 85%;
+    padding: 20px;
+  }
+}
